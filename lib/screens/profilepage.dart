@@ -5,7 +5,7 @@ class ProfilePage extends StatelessWidget {
 
    ProfilePage( {Key? key, required this.name, }) : super(key: key);
   String name;
-  static const routeName = '/profileArguments';
+
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,12 @@
+
 import 'package:flutter/material.dart';
+import 'package:management/routes/routesnames.dart';
+import 'package:management/routes/routesscreen.dart';
 import 'package:management/screens/listview.dart';
 import 'package:management/screens/profilepage.dart';
 import 'package:management/screens/screen2.dart';
 import 'package:management/screens/screen1.dart';
+import 'package:management/screens/screen3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,17 +26,12 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home:ListFunctionView(),
-        routes: {
-        'screen1':(context){
-          return ScreenOne();
-    },
-    'screen2':(context){
-          return ScreenTwo();
-    },
+      debugShowCheckedModeBanner: false,
+       initialRoute: RoutesNames.initialRoute,
+       onGenerateRoute:RoutesScreen.generateRoute ,
 
-
-    },
     );
+
+
   }
 }
